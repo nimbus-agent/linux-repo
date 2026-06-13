@@ -1,0 +1,5 @@
+Component: main
+Origin: Nimbus
+Label: Nimbus
+Architecture: amd64
+Description: Nimbus headless apt repository
