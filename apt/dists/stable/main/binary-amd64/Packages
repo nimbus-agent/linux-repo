@@ -1,15 +1,15 @@
 Package: nimbus-headless
-Version: 0.11.2
+Version: 0.12.0
 Architecture: amd64
 Depends: bubblewrap, libcap2-bin
 Maintainer: Nimbus Contributors <https://github.com/nimbus-dev/Nimbus>
 Priority: optional
 Section: utils
-Filename: pool/main/n/nimbus-headless/nimbus-headless_0.11.2_amd64.deb
-Size: 57005162
-SHA256: fb257749e1fddb6f8baccdeaab6fb0ce52ac48462ceab21574fb19bbfb187805
-SHA1: 4fe73999bdb27546f4fa4ed6d4069c2e2f8cbc76
-MD5sum: f933f70b0bd8785864945ad8de75c10c
+Filename: pool/main/n/nimbus-headless/nimbus-headless_0.12.0_amd64.deb
+Size: 56976578
+SHA256: 48aeb2e5f02fb26402eae374c94d087fcf44ae3ddfdb8c3fa6be555968d862fb
+SHA1: 463f906bb492fb99a2bc443722a55b6ce5cc4b43
+MD5sum: cf083da8a5b8ae31c7a33c19b33ce3f5
 Description: Nimbus CLI and headless Gateway (local-first agent framework)
  Installs nimbus and nimbus-gateway under /usr/lib/nimbus/bin with wrappers in /usr/local/bin.
  The sandbox helper is granted cap_net_admin+ep via setcap so the Gateway
