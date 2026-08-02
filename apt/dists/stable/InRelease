@@ -4,26 +4,26 @@ Hash: SHA512
 Origin: Nimbus
 Label: Nimbus
 Codename: stable
-Date: Sun, 02 Aug 2026 09:37:28 UTC
+Date: Sun, 02 Aug 2026 17:07:14 UTC
 Architectures: amd64
 Components: main
 Description: Nimbus headless apt repository
 MD5Sum:
- 143372a948e92a85d628495da650fa26 756 main/binary-amd64/Packages
- 75d7ad6cd411d93c6a4540e78c8ea26a 514 main/binary-amd64/Packages.gz
+ 2c7def59330a3a2e6c31609a93f6af37 756 main/binary-amd64/Packages
+ 004671ce3721c23dbfa42e4aba055fc6 514 main/binary-amd64/Packages.gz
  85507f49930a5549c8e035fb02c6fc6d 109 main/binary-amd64/Release
 SHA1:
- c538c21a1adef862ee735b00780d063f538742a8 756 main/binary-amd64/Packages
- e4f736f91a3813884039d41b703627d4a694fe23 514 main/binary-amd64/Packages.gz
+ 86642d47f25d2f2b68b6ecf159f7ba355f7cb53a 756 main/binary-amd64/Packages
+ 08a53d8c1ab26ef5d2c16a1f2052f2206f3c2082 514 main/binary-amd64/Packages.gz
  941e3bbad3b2b2393dfaee7b04ca51c501f891cb 109 main/binary-amd64/Release
 SHA256:
- 394b9e690b26f92f22e7e299e18704d9812cc05637c3c173b9d69b7b793a5134 756 main/binary-amd64/Packages
- 37a9775b9ec3b29cc8bc66bee68a132badc8da238e90edaa9858f75e4726de79 514 main/binary-amd64/Packages.gz
+ 43a5ebe5ffa1821c44c4babb2f9b484f7fbca5630e822f6eae2df93a10ac947c 756 main/binary-amd64/Packages
+ 360be8bca74eb9108ce0aafef413f2b7d89ac369238609615ebc7061e4fa20e5 514 main/binary-amd64/Packages.gz
  2aa82b9ed6019f624cc8bcb6f207260ba89dc90eef695e7ba1be455a71696775 109 main/binary-amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQTE8zHpGCfPiXxsR+8VZVRlT0oGOQUCam8P2gAKCRAVZVRlT0oG
-OVE8APsFbh/3GZTV15dLag5FyJF9ZJ8v16JSEfekoLNfe01DhQEAvdNS4zVi5N33
-7jGb4clwJeYEYzjwvZRGSfTdRPzfcQY=
-=q2Ey
+iHUEARYKAB0WIQTE8zHpGCfPiXxsR+8VZVRlT0oGOQUCam95QwAKCRAVZVRlT0oG
+OSvpAP97QfAAce61Y3kwAfhl25wG3W5L8MLp7JsaxHQQtNnIowD7Bp+iiYpdxPIC
+oVUIGIyVaQ2NqBRvCXbG1l6J/jnD5gk=
+=QQRt
 -----END PGP SIGNATURE-----
