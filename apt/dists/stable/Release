@@ -1,19 +1,19 @@
 Origin: Nimbus
 Label: Nimbus
 Codename: stable
-Date: Sat, 15 Aug 2026 14:30:13 UTC
+Date: Sat, 15 Aug 2026 16:28:53 UTC
 Architectures: amd64
 Components: main
 Description: Nimbus headless apt repository
 MD5Sum:
- 43cd0b0db6487663557cd77cabbc9f8a 754 main/binary-amd64/Packages
- e13190e879a633d617d2d0d5a68a845a 515 main/binary-amd64/Packages.gz
+ c7f274bea612b05872fe357b324abc47 754 main/binary-amd64/Packages
+ a30d85cbcb1bcb38a1b187d78b888c1b 515 main/binary-amd64/Packages.gz
  85507f49930a5549c8e035fb02c6fc6d 109 main/binary-amd64/Release
 SHA1:
- 79f1f5645018549760ae2063eedbbe11c4564ad2 754 main/binary-amd64/Packages
- 9c21fd9b9efee17af0ecc3390f4e1288beef3641 515 main/binary-amd64/Packages.gz
+ 5875a60c7d9ccb0b657457d7338f5e1ebd4d0040 754 main/binary-amd64/Packages
+ 70d5ab912da826a5196e99e0a0a0c2d2945fb13d 515 main/binary-amd64/Packages.gz
  941e3bbad3b2b2393dfaee7b04ca51c501f891cb 109 main/binary-amd64/Release
 SHA256:
- 41645621150a01ae1cd3503a177cfe3f538c9a583ac98a3b903abeae4c9a0511 754 main/binary-amd64/Packages
- a7727f77296fd07de1809a9657902cca9c696774afb5293b9ab97736df73366e 515 main/binary-amd64/Packages.gz
+ dff4ab0123e010f2d2ce2c1f80e9dab65ea8eae4e1251d9362128a739c85bead 754 main/binary-amd64/Packages
+ df0932b947bd495bf28bad449a7598cc24e1851a8e305faa4afbd8f2a774b2b9 515 main/binary-amd64/Packages.gz
  2aa82b9ed6019f624cc8bcb6f207260ba89dc90eef695e7ba1be455a71696775 109 main/binary-amd64/Release
