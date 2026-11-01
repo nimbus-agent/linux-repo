@@ -1,17 +1,17 @@
 Package: nimbus-headless
-Version: 9.2.1
+Version: 10.14.1
 Architecture: amd64
-Depends: bubblewrap, libcap2-bin
+Depends: bubblewrap
 Maintainer: Nimbus Contributors <https://github.com/nimbus-dev/Nimbus>
 Priority: optional
 Section: utils
-Filename: pool/main/n/nimbus-headless/nimbus-headless_9.2.1_amd64.deb
-Size: 78147140
-SHA256: 7a8346eba834c4d4eda293a388b551898c34e506055527380c635db703c5e915
-SHA1: 8217e9a39e7887d351564a7523ede2813b3d204f
-MD5sum: 1c96a1522f2b80b52bbe8bcca7773ec3
+Filename: pool/main/n/nimbus-headless/nimbus-headless_10.14.1_amd64.deb
+Size: 93760794
+SHA256: 407a52245b0f9746a195a095f5740bd23eb1ec91bb46eb4e7bcb387ba067de18
+SHA1: d16895de501dd88b78cfe160537e63b84b1f64bb
+MD5sum: 49383e3e9bc09800122a3eccc4efcb7f
 Description: Nimbus CLI and headless Gateway (local-first agent framework)
  Installs nimbus and nimbus-gateway under /usr/lib/nimbus/bin with wrappers in /usr/local/bin.
- The sandbox helper is granted cap_net_admin+ep via setcap so the Gateway
- can enforce per-host network filtering without running as root.
+ The sandbox helper holds no capability of its own; it runs inside bubblewrap's namespaces,
+ so the Gateway can enforce per-host network filtering without running as root.
 
