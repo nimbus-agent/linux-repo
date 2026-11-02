@@ -1,0 +1,75 @@
+# Serves a tree that nimbus-agent/Nimbus's publish-linux-repo.yml built and signed, attached as
+# site.tar to a site-* release here. Runbook: docs/ci-secrets.md § linux-repo deploy, in that repo.
+name: Deploy site
+
+on:
+  repository_dispatch:
+    types: [deploy-site]
+  # By hand, to put an earlier tree back.
+  workflow_dispatch:
+    inputs:
+      site_tag:
+        description: "site-* release to serve"
+        required: true
+        type: string
+
+# In order, never in parallel: the newest dispatch must be the one left serving.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
+      - name: Fetch and unpack the tree
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SITE_TAG: ${{ github.event.client_payload.site_tag || inputs.site_tag }}
+        run: |
+          set -euo pipefail
+          if ! [[ "$SITE_TAG" =~ ^site-[0-9A-Za-z.+-]+$ ]]; then
+            echo "::error::not a site release tag: $SITE_TAG"
+            exit 1
+          fi
+          gh release download "$SITE_TAG" --repo "$GITHUB_REPOSITORY" --pattern site.tar
+          mkdir site
+          tar -C site --no-same-owner -xf site.tar
+          # A Pages artifact may not hold a link, and this tree has no reason to.
+          if [ -n "$(find site -type l -print -quit)" ]; then
+            echo "::error::$SITE_TAG contains a symbolic link"
+            exit 1
+          fi
+          du -sh site
+
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
